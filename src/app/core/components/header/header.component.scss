@@ -1,0 +1,20 @@
+mat-toolbar{
+  background-color: blueviolet;
+  color: white;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  display: inline-block;
+  margin: 0 20px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  &:hover{
+    text-decoration: underline;
+  }
+}

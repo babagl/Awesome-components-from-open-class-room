@@ -1,0 +1,19 @@
+<div class="comment-row">
+  <mat-form-field>
+    <input type="text" matInput placeholder="Laisser un commentaire" [formControl]="commentCntrl">
+  </mat-form-field>
+  <button mat-icon-button color="primary" (click)="onLeaveComment()">
+    <mat-icon>send</mat-icon>
+  </button>
+</div>
+@if (comments.length){
+  <mat-list @list>
+    <h2 matSubheader>Commentaire</h2>
+    @for (comment of comments; track  comment.id; let i = $index){
+      <mat-list-item [@listItem]="animationStates[i]" (mouseenter)="onListItemMouseEnter(i)" (mouseleave)="onListItemMouseLeave(i)">
+        <span mat-line class="comment-text" >{{comment.comment}}</span><br/>
+        <span mat-line class="comment-date">{{comment.createdDate | timeAgo}}</span>
+      </mat-list-item>
+    }
+  </mat-list>
+}
