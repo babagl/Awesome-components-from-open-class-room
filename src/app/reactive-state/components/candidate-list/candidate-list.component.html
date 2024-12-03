@@ -3,6 +3,19 @@
     <mat-card-title>
       Candidats
     </mat-card-title>
+    <div class="form">
+      <mat-form-field appearance="fill">
+        <input matInput type="text" [formControl]="searchCtrl">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select [formControl]="searchTypeCtrl">
+          @for (option of searchTypeOptions; track $index){
+            <mat-option [value]="option.value">{{option.label}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
   </mat-card-title-group>
   @if (loading$ | async){
   <mat-spinner ></mat-spinner>

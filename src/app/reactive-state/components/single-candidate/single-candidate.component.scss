@@ -1,0 +1,25 @@
+mat-card {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+.img-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+button {
+  margin: 5px;
+}
